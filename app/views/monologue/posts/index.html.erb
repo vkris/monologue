@@ -1,5 +1,12 @@
+<% content_for :blogimage do %>
 <%= render @posts %>
-
+<% end %>
 <% if @page %>
 	<%= render partial: "pagination" %>
+<% end %>
+<% content_for :sidecategories do %>
+<%= render partial: "/monologue/sidebar/latest_posts" %>
+<% end %>
+<% content_for :tags do %>
+<%= render partial: "/monologue/sidebar/categories" %>
 <% end %>
